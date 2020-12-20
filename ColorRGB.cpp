@@ -34,29 +34,36 @@ ColorRGB::ColorRGB(short R, short G, short B)
 	blue = B;
 }
 
-short ColorRGB::GetR()
+short ColorRGB::GetR() const
 {
 	return red;
 }
 
-short ColorRGB::GetG()
+short ColorRGB::GetG() const
 {
 	return green;
 }
 
-short ColorRGB::GetB()
+short ColorRGB::GetB() const
 {
 	return blue;
 }
 
 bool operator==(const ColorRGB& obj1, const ColorRGB& obj2)
 {
-	if (obj1.red == obj2.red)
+	short r1 = obj1.GetR();
+	short r2 = obj2.GetR();
+	short g1 = obj1.GetG();
+	short g2 = obj2.GetG();
+	short b1 = obj1.GetB();
+	short b2 = obj2.GetB();
+
+	if (r1 == r2)
 	{
-		std::cout << obj1.red << "   " << obj2.red << std::endl;
-		if (obj1.green == obj2.green)
+		std::cout << r1 << "   " << r2 << std::endl;
+		if (g1 == g2)
 		{
-			if (obj1.blue == obj2.blue)
+			if (b1 == b2)
 			{
 				return true;
 			}
