@@ -18,9 +18,9 @@ public:
 	//friend std::iostream operator<< (const ColorRGB& obj1, const ColorRGB& obj2);
 
 	ColorRGB(short R, short G, short B);
-	short GetR();
-	short GetG();
-	short GetB();
+	short GetR() const;
+	short GetG() const;
+	short GetB() const;
 };
 
 #endif // _ColorRGB_H_
