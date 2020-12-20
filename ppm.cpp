@@ -65,6 +65,8 @@ ppm::ppm(const char* name) : obraz()
 		}
 		obraz::wielkosc = obraz::width * obraz::height;
 		//std::cout << obraz::wielkosc << std::endl;
+		
+		color1 = new ColorRGB[wielkosc];
 
 		//for (int i = 0; i < obraz::wielkosc; i = i)
 		for (int i = 0; i < 20; i = i)
