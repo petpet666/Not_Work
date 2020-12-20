@@ -64,11 +64,10 @@ ppm::ppm(const char* name) : obraz()
 			}
 		}
 		wielkosc = width * height;
-		//std::cout << obraz::wielkosc << std::endl;
-		
-		color1 = new ColorRGB[wielkosc];
 
-		//for (int i = 0; i < obraz::wielkosc; i = i)
+		ColorRGB* color2;
+		color2 = new ColorRGB[wielkosc];
+
 		for (int i = 0; i < 20; i = i)
 		{
 			std::getline(plik, rgb);
@@ -101,7 +100,7 @@ ppm::ppm(const char* name) : obraz()
 				j = j + number.length() - k;
 				k = number.length();
 
-				color1[ij] = ColorRGB(r, g, b);
+				color2[ij] = ColorRGB(r, g, b);
 				std::cout << r << g << b << std::endl;
 				ij++;
 				h--;
@@ -110,6 +109,9 @@ ppm::ppm(const char* name) : obraz()
 			h = 5;
 		}
 
+		color1 = color2;
+		delete[] color2;
+
 		plik.close();
 	}
 
@@ -117,7 +119,7 @@ ppm::ppm(const char* name) : obraz()
 
 ppm::~ppm()
 {
-
+	delete[] color1;
 }
 
 ppm::ppm(const ppm& obj):obraz()
