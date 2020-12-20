@@ -11,7 +11,7 @@ obraz::obraz() :
 
 obraz::~obraz()
 {
-	delete color1;
+	delete[] color1;
 }
 
 obraz::obraz(const obraz& obj)
@@ -44,3 +44,4 @@ int obraz::porownanie(const ColorRGB& obj1, const ColorRGB& obj2)
 
 	return i;
 }
+
