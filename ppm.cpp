@@ -50,20 +50,20 @@ ppm::ppm(const char* name) : obraz()
 				}
 				if (l == 1)
 				{
-					strumien >> obraz::width;
-					strumien >> obraz::height;
+					strumien >> width;
+					strumien >> height;
 					l++;
 					break;
 				}
 				if (l == 2)
 				{
-					strumien >> obraz::maksimum;
+					strumien >> maksimum;
 					k = 0;
 					break;
 				}
 			}
 		}
-		obraz::wielkosc = obraz::width * obraz::height;
+		wielkosc = width * height;
 		//std::cout << obraz::wielkosc << std::endl;
 		
 		color1 = new ColorRGB[wielkosc];
