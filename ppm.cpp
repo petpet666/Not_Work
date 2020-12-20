@@ -109,8 +109,7 @@ ppm::ppm(const char* name) : obraz()
 			h = 5;
 		}
 
-		*color1 = *color2;
-		delete[] color2;
+		color1 = color2;
 
 		plik.close();
 	}
