@@ -1,6 +1,6 @@
 #ifndef _ppm_H_
 #define _ppm_H_
-//#include "obraz.h"
+#include "obraz.h"
 
 class ppm :public obraz
 {
