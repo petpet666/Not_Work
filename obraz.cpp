@@ -6,7 +6,7 @@ obraz::obraz() :
 	maksimum(0),
 	wielkosc(width* height)
 {
-	color1 = new ColorRGB() [wielkosc];
+	color1 = new ColorRGB[wielkosc];
 }
 
 obraz::~obraz()
